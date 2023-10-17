@@ -89,53 +89,31 @@ PS C:\Users\apapi> ipconfig
 
 Configuration IP de Windows
 
-
-Carte Ethernet Ethernet :
-
-   Suffixe DNS propre à la connexion. . . :
-   Adresse IPv6 de liaison locale. . . . .: fe80::9bbb:62e1:3d1f:b6f0%9
-   Adresse d’autoconfiguration IPv4 . . . : 169.254.126.225
-   Masque de sous-réseau. . . . . . . . . : 255.255.0.0
-   Passerelle par défaut. . . . . . . . . :
-
-Carte Ethernet Ethernet 2 :
-
-   Suffixe DNS propre à la connexion. . . :
-   Adresse IPv6 de liaison locale. . . . .: fe80::947a:f737:29b7:f4f6%17
-   Adresse IPv4. . . . . . . . . . . . . .: 192.168.56.1
-   Masque de sous-réseau. . . . . . . . . : 255.255.255.0
-   Passerelle par défaut. . . . . . . . . :
-
-Carte réseau sans fil Connexion au réseau local* 1 :
-
-   Statut du média. . . . . . . . . . . . : Média déconnecté
-   Suffixe DNS propre à la connexion. . . :
-
-Carte réseau sans fil Connexion au réseau local* 2 :
-
-   Statut du média. . . . . . . . . . . . : Média déconnecté
-   Suffixe DNS propre à la connexion. . . :
-
-Carte Ethernet VMware Network Adapter VMnet1 :
-
-   Suffixe DNS propre à la connexion. . . :
-   Adresse IPv6 de liaison locale. . . . .: fe80::2b5b:b837:d1ae:2b71%15
-   Adresse IPv4. . . . . . . . . . . . . .: 192.168.52.1
-   Masque de sous-réseau. . . . . . . . . : 255.255.255.0
-   Passerelle par défaut. . . . . . . . . :
-
-Carte Ethernet VMware Network Adapter VMnet8 :
-
-   Suffixe DNS propre à la connexion. . . :
-   Adresse IPv6 de liaison locale. . . . .: fe80::84f4:6bf2:6c6f:125f%16
-   Adresse IPv4. . . . . . . . . . . . . .: 192.168.131.1
-   Masque de sous-réseau. . . . . . . . . : 255.255.255.0
-   Passerelle par défaut. . . . . . . . . :
+Avant modif :
 
 Carte réseau sans fil Wi-Fi :
 
    Suffixe DNS propre à la connexion. . . :
-   Adresse IPv6 de liaison locale. . . . .: fe80::25eb:8129:7a65:ed46%20
+   Adresse IPv6 de liaison locale. . . . .: fe80::6dc0:75e8:35fb:8abb%20
+   Adresse IPv4. . . . . . . . . . . . . .: 10.33.48.98
+   Masque de sous-réseau. . . . . . . . . : 255.255.252.0
    Passerelle par défaut. . . . . . . . . : 10.33.51.254
+
+après modif :
+
+Carte réseau sans fil Wi-Fi :
+
+   Suffixe DNS propre à la connexion. . . :
+   Adresse IPv6 de liaison locale. . . . .: fe80::6dc0:75e8:35fb:8abb%20
+   Adresse IPv4. . . . . . . . . . . . . .: 10.33.48.238
+   Masque de sous-réseau. . . . . . . . . : 255.255.252.0
+   Passerelle par défaut. . . . . . . . . : 10.33.51.254
+   
+ ```
+
+ 4. Petit chat privé
+
+ ```
+
 
  ```
