@@ -111,7 +111,7 @@ Carte réseau sans fil Wi-Fi :
    
  ```
 
- 4. Petit chat privé
+III. Manipulations d'autres outils/protocoles côté client
 
  ```
 
