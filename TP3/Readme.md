@@ -30,9 +30,36 @@ rtt min/avg/max/mdev = 0.514/0.641/0.768/0.127 ms
 observer les tables ARP des deux machines
 
 ```
-[anthony@localhost ~]$ ip r s
-10.3.1.0/24 dev enp0s3 proto kernel scope link src 10.3.1.11 metric 100
+[anthony@localhost ~]$ ip neigh show
+10.3.1.1 dev enp0s3 lladdr 0a:00:27:00:00:0e REACHABLE
+10.3.1.12 dev enp0s3 lladdr 08:00:27:79:03:a8 STALE
 
-[anthony@localhost ~]$ ip r s
-10.3.1.0/24 dev enp0s3 proto kernel scope link src 10.3.1.12 metric 100
+[anthony@localhost ~]$ ip neigh show
+10.3.1.11 dev enp0s3 lladdr 08:00:27:27:d9:21 STALE
+10.3.1.1 dev enp0s3 lladdr 0a:00:27:00:00:0e REACHABLE
+```
+repérer l'adresse MAC de john dans la table ARP de marcel et vice-versa
+
+```
+10.3.1.11
+ip addr
+08:00:27:27:d9:21
+
+10.3.1.12
+ip addr
+08:00:27:79:03:a8
+
+```
+prouvez que l'info est correcte (que l'adresse MAC que vous voyez dans la table est bien celle de la machine correspondante)
+
+une commande pour voir la MAC de marcel dans la table ARP de john
+
+```
+
+```
+et une commande pour afficher la MAC de marcel, depuis marcel
+
+```
+
+
 ```
