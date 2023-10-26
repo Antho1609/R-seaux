@@ -134,3 +134,10 @@ RTNETLINK answers: File exists
 RTNETLINK answers: File exists
 
 ```
+verifions la route 
+```
+[anthony@localhost ~]$ ip route show
+10.3.1.0/24 dev enp0s3 proto kernel scope link src 10.3.1.11 metric 100
+10.3.1.11 via 10.3.1.254 dev enp0s3
+10.3.1.12 via 10.3.1.254 dev enp0s3
+```
