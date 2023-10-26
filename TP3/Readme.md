@@ -83,6 +83,54 @@ et une commande pour afficher la MAC de marcel, depuis marcel
 utilisez la commande tcpdump pour réaliser une capture de trame
 
 ```
+[anthony@localhost ~]$ sudo tcpdump
+[sudo] password for anthony:
+dropped privs to tcpdump
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on enp0s3, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+12:11:01.126363 IP localhost.localdomain.ssh > 10.3.1.1.51668: Flags [P.], seq 694699714:694699774, ack 3278639915, win 501, length 60
+12:11:01.126538 IP localhost.localdomain.ssh > 10.3.1.1.51668: Flags [P.], seq 60:96, ack 1, win 501, length 36
+12:11:01.126563 IP localhost.localdomain.ssh > 10.3.1.1.51668: Flags [P.], seq 96:204, ack 1, win 501, length 108
+12:11:01.126695 IP 10.3.1.1.51668 > localhost.localdomain.ssh: Flags [.], ack 96, win 8211, length 0
+12:11:01.126714 IP localhost.localdomain.ssh > 10.3.1.1.51668: Flags [P.], seq 204:300, ack 1, win 501, length 96
+12:11:01.126851 IP 10.3.1.1.51668 > localhost.localdomain.ssh: Flags [.], ack 300, win 8211, length 0
+12:11:01.126879 IP localhost.localdomain.ssh > 10.3.1.1.51668: Flags [P.], seq 300:472, ack 1, win 501, length 172
+12:11:01.167292 IP 10.3.1.1.51668 > localhost.localdomain.ssh: Flags [.], ack 472, win 8210, length 0
+12:11:01.217444 IP localhost.localdomain.ssh > 10.3.1.1.51668: Flags [P.], seq 472:644, ack 1, win 501, length 172
+12:11:01.217544 IP localhost.localdomain.ssh > 10.3.1.1.51668: Flags [P.], seq 644:828, ack 1, win 501, length 184
+12:11:01.217670 IP localhost.localdomain.ssh > 10.3.1.1.51668: Flags [P.], seq 828:864, ack 1, win 501, length 36
+12:11:01.217730 IP localhost.localdomain.ssh > 10.3.1.1.51668: Flags [P.], seq 864:1012, ack 1, win 501, length 148
+12:11:01.217794 IP 10.3.1.1.51668 > localhost.localdomain.ssh: Flags [.], ack 828, win 8209, length 0
+12:11:01.217795 IP 10.3.1.1.51668 > localhost.localdomain.ssh: Flags [.], ack 1012, win 8208, length 0
+12:11:01.217859 IP localhost.localdomain.ssh > 10.3.1.1.51668: Flags [P.], seq 1012:1048, ack 1, win 501, length 36
+12:11:01.217913 IP localhost.localdomain.ssh > 10.3.1.1.51668: Flags [P.], seq 1048:1188, ack 1, win 501, length 140
 
+```
+videz vos tables ARP, sur les deux machines, puis effectuez un ping
+
+```
+[anthony@localhost ~]$ sudo ip neigh flush all
+```
+```
+[anthony@localhost ~]$ ping 10.3.1.11
+PING 10.3.1.11 (10.3.1.11) 56(84) bytes of data.
+64 bytes from 10.3.1.11: icmp_seq=1 ttl=64 time=0.741 ms
+64 bytes from 10.3.1.11: icmp_seq=2 ttl=64 time=0.590 ms
+64 bytes from 10.3.1.11: icmp_seq=3 ttl=64 time=0.444 ms
+64 bytes from 10.3.1.11: icmp_seq=4 ttl=64 time=0.483 ms
+```
+II. Routage
+1. Mise en place du routage
+
+Ajouter les routes statiques nécessaires pour que john et marcel puissent se ping
+
+```
+[anthony@localhost ~]$ sudo ip route add 10.3.1.11 via 10.3.1.254 dev enp0s3
+[sudo] password for anthony:
+RTNETLINK answers: File exists
+
+[anthony@localhost ~]$ sudo ip route add 10.3.1.12 via 10.3.1.254 dev enp0s3
+[sudo] password for anthony:
+RTNETLINK answers: File exists
 
 ```
