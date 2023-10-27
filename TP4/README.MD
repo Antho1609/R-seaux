@@ -43,3 +43,11 @@ samedi 28 octobre 2023 09:02:08
 ```
 
  Capturer un échange DHCP
+
+ forcer votre OS à refaire un échange DHCP complet
+
+ ```
+ 
+ 
+ 
+ ```
