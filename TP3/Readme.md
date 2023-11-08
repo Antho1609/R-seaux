@@ -119,7 +119,7 @@ PING 10.3.1.11 (10.3.1.11) 56(84) bytes of data.
 64 bytes from 10.3.1.11: icmp_seq=3 ttl=64 time=0.444 ms
 64 bytes from 10.3.1.11: icmp_seq=4 ttl=64 time=0.483 ms
 ```
-II. Routage
+# II. Routage
 1. Mise en place du routage
 
 Ajouter les routes statiques nécessaires pour que john et marcel puissent se ping
@@ -140,4 +140,25 @@ verifions la route
 10.3.1.0/24 dev enp0s3 proto kernel scope link src 10.3.1.11 metric 100
 10.3.1.11 via 10.3.1.254 dev enp0s3
 10.3.1.12 via 10.3.1.254 dev enp0s3
+```
+3. Accès internet 
+
+```
+[anthony@localhost ~]$ ping 8.8.8.8
+
+Envoi d’une requête 'Ping'  8.8.8.8 avec 32 octets de données :
+Réponse de 8.8.8.8 : octets=32 temps=19 ms TTL=112
+Réponse de 8.8.8.8 : octets=32 temps=19 ms TTL=112
+```
+
+Donnez un accès à vos machines - config client 
+
+```
+[anthony@localhost ~]$ ping 8.8.8.8
+
+PING 8.8.8.8 (8.8.8.8) 56(64) bytes of data.
+64 bytes from 8.8.8.8: impc_seq1 ttl=114 time=164ms
+64 bytes from 8.8.8.8: impc_seq2 ttl=114 time=18.5ms
+64 bytes from 8.8.8.8: impc_seq3 ttl=114 time=24.7ms
+
 ```

@@ -51,3 +51,9 @@ samedi 28 octobre 2023 09:02:08
  
  
  ```
+
+utiliser Wireshark pour capturer les 4 trames DHCP
+ ```
+ 
+ 
+ ```
