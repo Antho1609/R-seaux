@@ -44,16 +44,9 @@ samedi 28 octobre 2023 09:02:08
 
  Capturer un échange DHCP
 
- forcer votre OS à refaire un échange DHCP complet
+Forcer votre OS à refaire un échange DHCP complet
 
  ```
- 
- 
- 
- ```
-
-utiliser Wireshark pour capturer les 4 trames DHCP
- ```
- 
- 
+PS C:\Users\vince> ipconfig /release
+PS C:\Users\vince> ipconfig /renew
  ```
